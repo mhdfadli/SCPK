@@ -1,0 +1,127 @@
+/* Layout */
+html {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;} /* IE fix */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+.wrapper {
+  display: block; /* IE fix */
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+nav {
+  width: 17em;
+}
+.content {
+  display: block; /* IE fix */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+
+/* Responsive */
+
+@media (max-width: 640px) {
+	body {
+  min-height: 0; 
+}
+	.wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+	.content {
+		-ms-flex-preferred-size: auto;
+		    flex-basis: auto;
+	}
+  nav {
+    width: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+/* Decoration */
+
+body {
+	margin: 0;
+	background: rgb(4, 6, 131);
+}
+header, nav, section, footer {
+	padding: 10px 30px;
+	margin: 0px;
+	color: #fff;
+}
+header {
+  font-family: 'Times New Roman', Times, serif;
+	background: #44749d;
+  text-align: center;
+  padding: 25px;
+  border:1px solid #44749d;
+  margin: 10px 10px 0px 10px;
+}
+nav {
+  font-family: 'Times New Roman', Times, serif;
+	background: #666156;
+  padding: 0px;
+  margin: 0px 10px 0px 10px;
+  border: 2px solid #44749d;
+}
+nav a {
+  display: block;
+  font-weight: 900;
+  padding: .5em 1em;
+  color: #fff;
+  text-decoration: none;
+}
+ul {
+  font-size: small;
+	list-style-type: none;
+	padding: 10px 0 10px 15px;
+}
+
+li:hover {
+	background: white;
+	transition: all .3s ease-in;
+}
+
+
+li:hover a {
+	color: black;
+}
+
+section {
+	background: white;
+  color: black;
+  padding: 30px;
+  margin-right: 10px;
+  border-right: 1px solid #44749d;
+}
+footer {
+	background: #44749d;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  border: 2px solid #44749d;
+  margin: 0px 10px 20px 10px;
+
+  font-family: Garamond;
+  font-style: italic;
+}
